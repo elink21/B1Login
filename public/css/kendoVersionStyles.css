@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
+:root {
+  --primaryColor: #ffb300;
+  --primaryLight: #ffe54c;
+  --fontColor: black;
+  --selectedFontColor: white;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat";
+}
+
+::selection {
+  background-color: var(--primaryColor);
+  color: var(--selectedFontColor);
+}
+.stagger {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#loader h1 {
+  position: fixed;
+  width: 100vw;
+  text-align: center;
+  bottom: 0;
+  z-index: 3;
+}
+
+.stagger {
+  z-index: 2;
+}
+
+.stagger div {
+  background-color: var(--primaryColor);
+}
+
+#teamIcon {
+  font-size: 70px;
+}
+
+#whiteScreen {
+  position: fixed;
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+#homeLayout {
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr;
+  grid-template-areas: "svgIllustration loginForm .";
+  padding: 20px;
+}
+
+#loginDiv {
+  grid-area: loginForm;
+  text-align: center;
+  justify-items: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  padding: 20px;
+}
+
+#loginAlternatives {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#svgContainer {
+  grid-area: svgIllustration;
+  display: grid;
+  justify-items: center;
+}
+
+#svgContainer svg {
+  max-height: 90vh;
+  bottom: 0;
+}
+
+#loggedInView {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+#loggedInView svg {
+  max-height: 60vh;
+}
+
+#message {
+  text-align: center;
+}
+
+#logoutButton {
+  background-color: var(--primaryColor);
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#message a {
+  text-decoration: none;
+  color: white;
+}
+
+#passwordRecoveryLayout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 90vw;
+  height: 90vh;
+  padding: 20px;
+  align-items: center;
+}
+
+#emailInputField {
+  text-align: center;
+}
+
+#illustration svg {
+  max-height: 80vh;
+}
+
+#homeButton {
+  color: var(--primaryColor);
+  position: fixed;
+  padding: 10px;
+  background-color: var(--primaryColor);
+}
+
+#homeButton a {
+  text-decoration: none;
+  color: white;
+}
+
+#homeButton i {
+  font-size: 40px;
+}
+
+.k-form-buttons{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#registerLayout{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: ". registerForm .";
+}
+
+#registerForm{
+  grid-area: registerForm;
+  text-align: center;
+}
+
+#registerForm i{
+  font-size: 60px;
+}
